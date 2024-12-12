@@ -8,14 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Network)
 
 add_executable(ToDoApp
     src/main.cpp
     src/todo.cpp
     src/todo.h
+
     )
 
-target_link_libraries(ToDoApp PRIVATE Qt6::Widgets)
+target_link_libraries(ToDoApp PRIVATE Qt6::Widgets Qt6::Network)
 
 

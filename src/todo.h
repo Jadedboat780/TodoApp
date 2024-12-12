@@ -8,6 +8,8 @@
 #include <QLineEdit>
 #include <QStatusBar>
 #include <QHBoxLayout>
+#include <QTcpSocket>
+
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -20,6 +22,9 @@ private slots:
     void addTask();
     void removeTask();
     void markTaskDone();
+    void saveTasks();
+    void loadTasks();
+    void connectToServer();
 
 private:
     QListWidget *taskList;
